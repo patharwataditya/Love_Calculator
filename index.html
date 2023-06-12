@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Love Calculator</title>
+  </head>
+  <body background="img5.jpg">
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form action="">
+            <h2>Calculate Love Score</h2>
+            <div class="inputbox">
+              <ion-icon name="man-outline"></ion-icon>
+              <input type="text" id="maleName" required />
+              <label for="">Name of Male</label>
+            </div>
+            <div class="inputbox">
+              <ion-icon name="woman-outline"></ion-icon>
+              <input type="text" id="femaleName" required />
+              <label for="">Name of Female</label>
+            </div>
+            <button id="cal_love">Calculate</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const cal_love = document.getElementById("cal_love");
+
+      cal_love.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const mname = document.getElementById("maleName").value;
+        const fname = document.getElementById("femaleName").value;
+
+        if (mname === "Aditya" && fname === "Gayatri") {
+          alert("98% Wow!! You are made for Each other");
+        } else {
+          var rn = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+          if (rn > 70) {
+            alert(rn + "% Wow!! You are made for Each other");
+          } else {
+            alert(rn + "% Find a new partner");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
