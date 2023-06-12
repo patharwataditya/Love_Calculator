@@ -39,15 +39,15 @@
       cal_love.addEventListener("click", function (event) {
         event.preventDefault();
 
-        const mname = document.getElementById("maleName").value;
-        const fname = document.getElementById("femaleName").value;
+        const mname = document.getElementById("maleName").value.toLowerCase();
+        const fname = document.getElementById("femaleName").value.toLowerCase();
 
-        if (mname === "Aditya" && fname === "Gayatri") {
-          alert("98% Wow!! You are made for Each other");
+        if (mname === "aditya" && fname === "gayatri") {
+          alert("98% Wow!! You are made for each other");
         } else {
-          var rn = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+          var rn = Math.floor(Math.random() * 100) + 1;
           if (rn > 70) {
-            alert(rn + "% Wow!! You are made for Each other");
+            alert(rn + "% Wow!! You are made for each other");
           } else {
             alert(rn + "% Find a new partner");
           }
