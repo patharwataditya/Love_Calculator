@@ -46,15 +46,18 @@
 
         const mname = document.getElementById("maleName").value.toLowerCase();
         const fname = document.getElementById("femaleName").value.toLowerCase();
-
-        if (mname === "aditya" && fname === "gayatri") {
-          alert("98% Wow!! You are made for each other");
+        if (mname < 1 && fname < 1) {
+          alert("Please Enter Both Names");
         } else {
-          var rn = Math.floor(Math.random() * 100) + 1;
-          if (rn > 70) {
-            alert(rn + "% Wow!! You are made for each other");
+          if (mname === "aditya" && fname === "gayatri") {
+            alert("98% Wow!! You are made for each other");
           } else {
-            alert(rn + "% Find a new partner");
+            var rn = Math.floor(Math.random() * 100) + 1;
+            if (rn > 70) {
+              alert(rn + "% Wow!! You are made for each other");
+            } else {
+              alert(rn + "% Find a new partner");
+            }
           }
         }
       });
